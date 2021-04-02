@@ -3,9 +3,9 @@ import java.awt.*;
 import java.awt.geom.*;
 
 public class Ellipse {
-	int x,y;
-	int w,h;
-	Color fundo,contorno;
+	private int x,y;
+	private int w,h;
+	private Color fundo,contorno;
 
 	public Ellipse (int x, int y, int w, int h, Color fundo, Color contorno){
 		this.x = x;
@@ -16,7 +16,7 @@ public class Ellipse {
 		this.contorno = contorno;
 	}
 
-	public void print(){
+	private void print(){
 		System.out.format("(%d,%d) / (%d,%d)\n",
 				this.w,this.h,this.x,this.y);
 	}

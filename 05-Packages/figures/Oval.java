@@ -1,12 +1,13 @@
 package figures;
 import java.awt.*;
+import java.awt.geom.*;
 
-public class Rect {
+public class Oval {
 	private int x,y;
 	private int w,h;
 	private Color fundo,contorno;
 
-	public Rect (int x, int y, int w, int h, Color fundo, Color contorno){
+	public Oval(int x, int y, int w, int h, Color fundo, Color contorno){
 		this.x = x;
 		this.y = y;
 		this.w = w;
@@ -24,15 +25,15 @@ public class Rect {
 		Graphics2D g2d = (Graphics2D) g;
 
 		g2d.setColor(this.fundo);
-		g2d.fillRect(
+		g2d.fillOval(
 				this.x,this.y,
 				this.w,this.h
-			    );
+				);
 
 		g2d.setColor(this.contorno);
-		g2d.drawRect(
+		g2d.drawOval(
 				this.x,this.y,
 				this.w,this.h
-			    );
+				);
 	}
 }

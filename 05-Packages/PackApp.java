@@ -4,6 +4,7 @@ import java.awt.geom.*;
 import javax.swing.*;
 import figures.Rect;
 import figures.Ellipse;
+import figures.Oval;
 
 class PackApp{
 	public static void main(String[] args){
@@ -13,7 +14,9 @@ class PackApp{
 }
 
 class PackFrame extends JFrame{
-	Ellipse e1,e2,e3;
+	Rect r1;
+	Ellipse e1;
+	Oval o1;
 
 	PackFrame(){
 		this.setTitle("Painting Fogures");
@@ -26,15 +29,15 @@ class PackFrame extends JFrame{
 		Color FC = new Color(100,255,255);
 		Color CC = new Color(0,0,255);
 
-		this.e1 = new Ellipse(50,50,100,30,FA,CA);
-		this.e2 = new Ellipse(200,200,100,50,FB,CB);
-		this.e3 = new Ellipse(50,200,100,30,FC,CC);
+		this.r1 = new Rect(50,50,100,30,FA,CA);
+		this.e1 = new Ellipse(200,200,100,50,FB,CB);
+		this.o1 = new Oval(50,200,100,30,FC,CC);
 	}
 
 	public void paint (Graphics g) {
 		super.paint(g);
+		this.r1.paint(g);
 		this.e1.paint(g);
-		this.e2.paint(g);
-		this.e3.paint(g);
+		this.o1.paint(g);
 	}
 }
